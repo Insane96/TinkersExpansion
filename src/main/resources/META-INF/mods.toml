@@ -30,9 +30,9 @@ Expanding Tinkers' Construct since 2023
     versionRange="[3.6.3.111,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.tinkersexpansion]]
-    modId="jsonthings"
-    mandatory=true
-    versionRange="[0.4.2,)"
-    ordering="NONE"
-    side="BOTH"
+# [[dependencies.tinkersexpansion]]
+#    modId="jsonthings"
+#    mandatory=true
+#    versionRange="[0.4.6,)"
+#    ordering="NONE"
+#    side="BOTH"

@@ -1,4 +1,4 @@
-package insane96mcp.buildersconstruct;
+package insane96mcp.tinkersexpansion;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;

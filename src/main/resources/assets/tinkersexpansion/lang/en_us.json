@@ -1,6 +1,6 @@
 {
-    "modifier.tinkersexpansion.d20.flavor": "Will you take he chance?",
-    "modifier.tinkersexpansion.d20.description": "Roll a die on mob loot or block loot and change the out outcome.",
+    "modifier.tinkersexpansion.d20.flavor": "Will you take the chance?",
+    "modifier.tinkersexpansion.d20.description": "Roll a die on mob or block loot and increase/decrease the outcome.",
 
     "modifier.tinkersexpansion.d20": "D20",
     "modifier.tinkersexpansion.d20.1": "D20",
