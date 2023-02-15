@@ -1,0 +1,13 @@
+{
+    "modifier.tinkercombatroll.multi_roll": "Multi Roll",
+    "modifier.tinkercombatroll.multi_roll.flavor": "",
+    "modifier.tinkercombatroll.multi_roll.description": "You gain one additional roll",
+
+    "modifier.tinkercombatroll.acrobat": "Acrobat",
+    "modifier.tinkercombatroll.acrobat.flavor": "",
+    "modifier.tinkercombatroll.acrobat.description": "You can roll more often",
+
+    "modifier.tinkercombatroll.longfooted": "Longfooted",
+    "modifier.tinkercombatroll.longfooted.flavor": "",
+    "modifier.tinkercombatroll.longfooted.description": "You roll farther"
+}

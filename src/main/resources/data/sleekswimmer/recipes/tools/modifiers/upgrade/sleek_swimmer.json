@@ -1,0 +1,31 @@
+{
+    "type": "tconstruct:modifier",
+    "inputs": [
+        {
+            "item": "minecraft:kelp"
+        },
+        {
+            "item": "minecraft:pufferfish"
+        },
+        {
+            "item": "minecraft:kelp"
+        },
+        {
+            "tag": "sleekswimmer:coral_plants"
+        },
+        {
+            "tag": "sleekswimmer:coral_plants"
+        }
+    ],
+    "tools": {
+        "tag": "tconstruct:modifiable/armor/leggings"
+    },
+    "slots": {
+        "upgrades": 1
+    },
+    "result": {
+        "name": "sleekswimmer:sleek_swimmer",
+        "level": 1
+    },
+    "max_level": 3
+}

@@ -1,0 +1,32 @@
+{
+    "type": "tconstruct:modifier",
+    "inputs": [
+        {
+            "item": "minecraft:piston"
+        },
+        {
+            "item": "minecraft:amethyst_block"
+        },
+        {
+            "item": "minecraft:piston"
+        },
+        {
+            "item": "minecraft:phantom_membrane"
+        },
+        {
+            "item": "minecraft:phantom_membrane"
+        }
+    ],
+    "tools": {
+        "tag": "tconstruct:modifiable/armor/leggings"
+    },
+    "slots": {
+        "upgrades": 1
+    },
+    "result": {
+        "name": "tinkercombatroll:acrobat",
+        "level": 1
+    },
+    "allow_crystal": true,
+    "max_level": 5
+}

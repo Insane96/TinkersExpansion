@@ -1,0 +1,32 @@
+{
+    "type": "tconstruct:modifier",
+    "inputs": [
+        {
+            "item": "minecraft:piston"
+        },
+        {
+            "item": "tconstruct:pig_iron_ingot"
+        },
+        {
+            "item": "minecraft:piston"
+        },
+        {
+            "item": "minecraft:fishing_rod"
+        },
+        {
+            "item": "minecraft:carrot"
+        }
+    ],
+    "tools": {
+        "tag": "tconstruct:modifiable/armor/helmets"
+    },
+    "slots": {
+        "upgrades": 1
+    },
+    "result": {
+        "name": "tinkercombatroll:multi_roll",
+        "level": 1
+    },
+    "allow_crystal": true,
+    "max_level": 4
+}

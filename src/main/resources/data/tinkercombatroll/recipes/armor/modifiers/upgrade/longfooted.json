@@ -1,0 +1,26 @@
+{
+    "type": "tconstruct:modifier",
+    "inputs": [
+        {
+            "item": "minecraft:piston"
+        },
+        {
+            "tag": "forge:ingots/queens_slime"
+        },
+        {
+            "item": "minecraft:piston"
+        }
+    ],
+    "tools": {
+        "tag": "tconstruct:modifiable/armor/boots"
+    },
+    "slots": {
+        "upgrades": 1
+    },
+    "result": {
+        "name": "tinkercombatroll:longfooted",
+        "level": 1
+    },
+    "allow_crystal": true,
+    "max_level": 5
+}

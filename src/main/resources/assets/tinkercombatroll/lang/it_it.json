@@ -1,0 +1,13 @@
+{
+    "modifier.tinkercombatroll.multi_roll": "Multi Capriola",
+    "modifier.tinkercombatroll.multi_roll.flavor": "",
+    "modifier.tinkercombatroll.multi_roll.description": "Ottieni una capriola in più",
+
+    "modifier.tinkercombatroll.acrobat": "Acrobata",
+    "modifier.tinkercombatroll.acrobat.flavor": "",
+    "modifier.tinkercombatroll.acrobat.description": "Puoi rotolare più spesso",
+
+    "modifier.tinkercombatroll.longfooted": "Piedelungo",
+    "modifier.tinkercombatroll.longfooted.flavor": "",
+    "modifier.tinkercombatroll.longfooted.description": "Rotoli più lontano"
+}

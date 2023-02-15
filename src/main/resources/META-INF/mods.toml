@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="All rights reserved"
+[[mods]]
+modId="tinkersexpansion"
+version="${file.jarVersion}"
+displayName="Tinkers' Expansion"
+# logoFile="examplemod.png"
+# credits="Thanks for this example mod goes to Java"
+authors="Insane96MCP"
+description='''
+Expanding Tinkers' Construct since 2023
+'''
+
+[[dependencies.tinkersexpansion]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.tinkersexpansion]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.tinkersexpansion]]
+    modId="tconstruct"
+    mandatory=true
+    versionRange="[3.6.3.111,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.tinkersexpansion]]
+    modId="jsonthings"
+    mandatory=true
+    versionRange="[0.4.2,)"
+    ordering="NONE"
+    side="BOTH"
