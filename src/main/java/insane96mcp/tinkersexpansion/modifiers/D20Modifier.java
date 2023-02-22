@@ -41,9 +41,6 @@ public class D20Modifier extends Modifier {
     public List<ItemStack> processLoot(IToolStackView tool, int level, List<ItemStack> generatedLoot, LootContext context) {
         if (tool.getModifierLevel(TinkerModifiers.silky.get()) > 0)
             return generatedLoot;
-        /*if (level > DIE_ROLLS.length - 1)
-            level = DIE_ROLLS.length - 1;
-        int luck = getAmountWithDecimalChance(context.getLuck());*/
         int die = 20 + (level - 1);
         int roll = RANDOM.nextInt(die) + 1;
         if (roll > 1 && roll < 19)
@@ -59,19 +56,5 @@ public class D20Modifier extends Modifier {
             toModify.grow(1);
         }
         return generatedLoot;
-    }
-
-    /**
-     * Given a value, will return the integer part plus a chance given by the decimal part to have a +1 on the return value
-     * Example 1.2 would have 20% chance to return 2 and 80% chance to return 1
-     */
-    public int getAmountWithDecimalChance(double f) {
-        double mod = f - (int)f;
-        if (mod == 0f)
-            return (int) f;
-        f -= mod;
-        if (RANDOM.nextDouble() < mod)
-            f++;
-        return (int) f;
     }
 }

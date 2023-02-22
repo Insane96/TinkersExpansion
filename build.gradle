@@ -73,7 +73,7 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'tinkersexpansion', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'tinkersexpansion', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'tconstruct'
 
             mods {
                 tinkersexpansion {
@@ -121,8 +121,6 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}")
     // at runtime, use the full JEI jar for Forge
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
-
-    compileOnly fg.deobf("dev.gigaherz.jsonthings:JsonThings-${mc_version}:${jsonthings_version}")
 
     //runtimeOnly fg.deobf("curse.maven:MmmMmmMmmMmm-225738:3820503")
     //runtimeOnly fg.deobf("curse.maven:lazy-dfu-forge-460819:3544496")
