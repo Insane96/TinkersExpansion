@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersexpansion:slimedice",
+  "temperature": 900,
+  "result": {
+    "fluid": "tinkersexpansion:molten_slimedice",
+    "amount": 90
+  }
+}

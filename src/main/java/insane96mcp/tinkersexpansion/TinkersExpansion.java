@@ -5,6 +5,7 @@ import insane96mcp.tinkersexpansion.client.TERenderInfo;
 import insane96mcp.tinkersexpansion.setup.TEItemsBlocks;
 import insane96mcp.tinkersexpansion.setup.TEMaterials;
 import insane96mcp.tinkersexpansion.setup.TEModifiers;
+import insane96mcp.tinkersexpansion.setup.TERecipes;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -44,6 +45,7 @@ public class TinkersExpansion
         }
         if (event.includeServer()) {
             generator.addProvider(new TEModifiers(generator));
+            generator.addProvider(new TERecipes(generator));
             AbstractMaterialDataProvider materials = new TEMaterials(generator);
             generator.addProvider(materials);
             generator.addProvider(new TEMaterials.TEMaterialStats(generator, materials));

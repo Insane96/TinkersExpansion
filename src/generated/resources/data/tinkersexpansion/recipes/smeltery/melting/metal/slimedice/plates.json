@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:plates/slimedice",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:plates/slimedice"
+  },
+  "result": {
+    "fluid": "tinkersexpansion:molten_slimedice",
+    "amount": 90
+  },
+  "temperature": 900,
+  "time": 63
+}

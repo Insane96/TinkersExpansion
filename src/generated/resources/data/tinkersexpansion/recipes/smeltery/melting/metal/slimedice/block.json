@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:storage_blocks/slimedice"
+  },
+  "result": {
+    "fluid": "tinkersexpansion:molten_slimedice",
+    "amount": 810
+  },
+  "temperature": 900,
+  "time": 190
+}

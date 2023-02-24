@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:storage_blocks/slimedice"
+  },
+  "value": 9,
+  "needed": 1,
+  "material": "tinkersexpansion:slimedice",
+  "leftover": {
+    "tag": "forge:ingots/slimedice"
+  }
+}

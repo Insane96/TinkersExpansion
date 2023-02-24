@@ -1,9 +1,9 @@
 {
-    "block.tinkersexpansion.slimedie_block": "Slimedie Block",
-    "item.tinkersexpansion.slimedie_ingot": "Slimedie Ingot",
-    "item.tinkersexpansion.slimedie_nugget": "Slimedie Nugget",
-    "item.tinkersexpansion.molten_slimedie_bucket": "Slimedie Bucket",
-    "fluid.tinkersexpansion.molten_slimedie": "Molten Slimedie",
+    "block.tinkersexpansion.slimedice_block": "Slimedice Block",
+    "item.tinkersexpansion.slimedice_ingot": "Slimedice Ingot",
+    "item.tinkersexpansion.slimedice_nugget": "Slimedice Nugget",
+    "item.tinkersexpansion.molten_slimedice_bucket": "Slimedice Bucket",
+    "fluid.tinkersexpansion.molten_slimedice": "Molten Slimedice",
 
     "modifier.tinkersexpansion.d20.flavor": "Will you take the chance?",
     "modifier.tinkersexpansion.d20.description": "Roll a die on mob or block loot and increase/decrease the outcome."

@@ -1,0 +1,22 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    {
+      "name": "tconstruct:molten_diamond",
+      "amount": 100
+    },
+    {
+      "name": "tconstruct:molten_obsidian",
+      "amount": 2000
+    },
+    {
+      "name": "tconstruct:liquid_soul",
+      "amount": 2000
+    }
+  ],
+  "result": {
+    "fluid": "tinkersexpansion:molten_slimedice",
+    "amount": 90
+  },
+  "temperature": 900
+}

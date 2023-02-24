@@ -13,7 +13,7 @@ public class TERenderInfo extends AbstractMaterialRenderInfoProvider {
 
     @Override
     protected void addMaterialRenderInfo() {
-        buildRenderInfo(TEMaterials.SLIMEDIE).color(0x8ad4a8);
+        buildRenderInfo(TEMaterials.SLIMEDICE).color(0x8ad4a8);
     }
 
     @Override

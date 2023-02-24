@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/nugget"
+  },
+  "fluid": {
+    "tag": "tinkersexpansion:molten_slimedice",
+    "amount": 10
+  },
+  "result": "tinkersexpansion:slimedice_nugget",
+  "cooling_time": 21
+}

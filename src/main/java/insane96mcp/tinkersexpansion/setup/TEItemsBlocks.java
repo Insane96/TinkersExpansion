@@ -33,10 +33,10 @@ public class TEItemsBlocks {
     protected static final Function<Block,? extends BlockItem> GENERAL_TOOLTIP_BLOCK_ITEM = (b) -> new BlockTooltipItem(b, GENERAL_PROPS);
 
 
-    //Slimedie
-    public static final MetalItemObject SLIMEDIE = BLOCKS.registerMetal("slimedie", metalBuilder(MaterialColor.TERRACOTTA_GREEN), GENERAL_TOOLTIP_BLOCK_ITEM, GENERAL_PROPS);
+    //Slimedice
+    public static final MetalItemObject SLIMEDICE = BLOCKS.registerMetal("slimedice", metalBuilder(MaterialColor.TERRACOTTA_GREEN), GENERAL_TOOLTIP_BLOCK_ITEM, GENERAL_PROPS);
 
-    public static final FluidObject<ForgeFlowingFluid> MOLTEN_SLIMEDIE = FLUIDS.register("molten_slimedie", hotBuilder().temperature(1200), Material.LAVA, 8);
+    public static final FluidObject<ForgeFlowingFluid> MOLTEN_SLIMEDICE = FLUIDS.register("molten_slimedice", hotBuilder().temperature(1200), Material.LAVA, 8);
 
 
     /** Creates a builder for a hot fluid */

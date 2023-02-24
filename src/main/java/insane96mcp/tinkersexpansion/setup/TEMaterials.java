@@ -12,7 +12,7 @@ import slimeknights.tconstruct.tools.stats.*;
 
 public class TEMaterials extends AbstractMaterialDataProvider {
 
-    public static final MaterialId SLIMEDIE = createMaterial("slimedie");
+    public static final MaterialId SLIMEDICE = createMaterial("slimedice");
 
     public TEMaterials(DataGenerator gen) {
         super(gen);
@@ -20,7 +20,7 @@ public class TEMaterials extends AbstractMaterialDataProvider {
 
     @Override
     protected void addMaterials() {
-        addMaterial(SLIMEDIE, 3, ORDER_WEAPON, true);
+        addMaterial(SLIMEDICE, 3, ORDER_WEAPON, true);
     }
 
     private static MaterialId createMaterial(String name) {
@@ -45,7 +45,7 @@ public class TEMaterials extends AbstractMaterialDataProvider {
 
         @Override
         protected void addMaterialTraits() {
-            addDefaultTraits(SLIMEDIE, TEModifiers.D20);
+            addDefaultTraits(SLIMEDICE, TEModifiers.D20);
         }
     }
 
@@ -62,7 +62,7 @@ public class TEMaterials extends AbstractMaterialDataProvider {
 
         @Override
         protected void addMaterialStats() {
-            addMaterialStats(SLIMEDIE,
+            addMaterialStats(SLIMEDICE,
                     new HeadMaterialStats(250, 4f, Tiers.DIAMOND, 2.5f),
                     new HandleMaterialStats(0.85f, 1.0f, 0.9f, 1.2f),
                     ExtraMaterialStats.DEFAULT,

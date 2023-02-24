@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:casting_basin",
+  "fluid": {
+    "tag": "tinkersexpansion:molten_slimedice",
+    "amount": 810
+  },
+  "result": "tinkersexpansion:slimedice_block",
+  "cooling_time": 190
+}

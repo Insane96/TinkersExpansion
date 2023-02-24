@@ -1,8 +1,0 @@
-{
-    "loader": "mantle:fluid_texture",
-    "textures": {
-        "still": "tinkersexpansion:block/fluid/slimedie/still",
-        "flowing": "tinkersexpansion:block/fluid/slimedie/flowing"
-    }
-}
-

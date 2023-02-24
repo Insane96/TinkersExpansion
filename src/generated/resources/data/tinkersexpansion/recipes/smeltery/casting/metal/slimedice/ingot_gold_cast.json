@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/ingot"
+  },
+  "fluid": {
+    "tag": "tinkersexpansion:molten_slimedice",
+    "amount": 90
+  },
+  "result": "tinkersexpansion:slimedice_ingot",
+  "cooling_time": 63
+}

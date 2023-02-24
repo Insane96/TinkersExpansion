@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:true"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX",
+          "XYX",
+          "XXX"
+        ],
+        "key": {
+          "X": {
+            "tag": "forge:nuggets/slimedice"
+          },
+          "Y": {
+            "item": "tinkersexpansion:slimedice_nugget"
+          }
+        },
+        "result": {
+          "item": "tinkersexpansion:slimedice_ingot"
+        }
+      }
+    }
+  ]
+}
