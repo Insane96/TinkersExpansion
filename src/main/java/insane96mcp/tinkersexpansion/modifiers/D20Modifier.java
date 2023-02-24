@@ -34,7 +34,7 @@ public class D20Modifier extends Modifier {
 
     @Override
     public int getPriority() {
-        return 95; //Should run after luck
+        return 101; //Should run after luck
     }
 
     @Override

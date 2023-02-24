@@ -1,13 +1,14 @@
-package insane96mcp.tinkersexpansion.setup;
+package insane96mcp.tinkersexpansion.data;
 
 import insane96mcp.tinkersexpansion.TinkersExpansion;
+import insane96mcp.tinkersexpansion.setup.TEItemsBlocks;
+import insane96mcp.tinkersexpansion.setup.TEMaterials;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -21,8 +22,8 @@ import slimeknights.tconstruct.library.recipe.alloying.AlloyRecipeBuilder;
 
 import java.util.function.Consumer;
 
-public class TERecipes extends RecipeProvider implements IConditionBuilder, IMaterialRecipeHelper, IToolRecipeHelper, ISmelteryRecipeHelper, IRecipeHelper {
-    public TERecipes(DataGenerator p_125973_) {
+public class TERecipesProvider extends RecipeProvider implements IConditionBuilder, IMaterialRecipeHelper, IToolRecipeHelper, ISmelteryRecipeHelper, IRecipeHelper {
+    public TERecipesProvider(DataGenerator p_125973_) {
         super(p_125973_);
     }
 
@@ -56,9 +57,10 @@ public class TERecipes extends RecipeProvider implements IConditionBuilder, IMat
         metalMelting(consumer, TEItemsBlocks.MOLTEN_SLIMEDICE.get(), "slimedice", false, meltingFolder, false);
 
         AlloyRecipeBuilder.alloy(TEItemsBlocks.MOLTEN_SLIMEDICE.get(), FluidValues.INGOT)
-                .addInput(TinkerFluids.moltenDiamond.get(), FluidValues.GEM)
-                .addInput(TinkerFluids.moltenObsidian.get(), FluidValues.GLASS_BLOCK * 2)
+                .addInput(TinkerFluids.moltenGold.get(), FluidValues.INGOT * 3)
+                .addInput(TinkerFluids.moltenObsidian.get(), FluidValues.GLASS_BLOCK)
                 .addInput(TinkerFluids.liquidSoul.get(), FluidValues.GLASS_BLOCK * 2)
+                .addInput(TinkerFluids.earthSlime.get(), FluidValues.SLIMEBALL * 3)
                 .save(consumer, prefix(TEItemsBlocks.MOLTEN_SLIMEDICE, alloyFolder));
 
         metalMaterialRecipe(consumer, TEMaterials.SLIMEDICE, materialFolder, "slimedice", false);
@@ -69,10 +71,9 @@ public class TERecipes extends RecipeProvider implements IConditionBuilder, IMat
         ConditionalRecipe.builder().addCondition(this.TRUE()).addRecipe(
                         ShapedRecipeBuilder.shaped(block, 1)
                                 .pattern("XXX")
-                                .pattern("XYX")
                                 .pattern("XXX")
-                                .define('X', ItemTags.create(new ResourceLocation("forge", "ingots/" + name)))
-                                .define('Y', ingot)
+                                .pattern("XXX")
+                                .define('X', ingot)
                                 .group("")
                                 .unlockedBy("has_ingot", has(ingot))
                                 ::save
@@ -93,10 +94,9 @@ public class TERecipes extends RecipeProvider implements IConditionBuilder, IMat
         ConditionalRecipe.builder().addCondition(this.TRUE()).addRecipe(
                         ShapedRecipeBuilder.shaped(ingot, 1)
                                 .pattern("XXX")
-                                .pattern("XYX")
                                 .pattern("XXX")
-                                .define('X', ItemTags.create(new ResourceLocation("forge", "nuggets/" + name)))
-                                .define('Y', nugget)
+                                .pattern("XXX")
+                                .define('X', nugget)
                                 .group("")
                                 .unlockedBy("has_nugget", has(nugget))
                                 ::save

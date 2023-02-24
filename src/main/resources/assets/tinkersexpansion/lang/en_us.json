@@ -5,6 +5,11 @@
     "item.tinkersexpansion.molten_slimedice_bucket": "Slimedice Bucket",
     "fluid.tinkersexpansion.molten_slimedice": "Molten Slimedice",
 
+    "material.tinkersexpansion.slimedice": "Slimedice",
+    "material.tinkersexpansion.slimedice.flavor": "Saving throw on Luck",
+    "material.tinkersexpansion.slimedice.encyclopedia": "Roll a D20 on mob loot, with 1, the loot it decreased by 1, with 20+, the loot is increased by 1",
+
+    "modifier.tinkersexpansion.d20": "D20",
     "modifier.tinkersexpansion.d20.flavor": "Will you take the chance?",
-    "modifier.tinkersexpansion.d20.description": "Roll a die on mob or block loot and increase/decrease the outcome."
+    "modifier.tinkersexpansion.d20.description": "Roll a die on mob loot and increase/decrease the outcome."
 }

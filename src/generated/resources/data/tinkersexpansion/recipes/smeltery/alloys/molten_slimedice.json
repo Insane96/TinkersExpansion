@@ -2,16 +2,20 @@
   "type": "tconstruct:alloy",
   "inputs": [
     {
-      "name": "tconstruct:molten_diamond",
-      "amount": 100
+      "name": "tconstruct:molten_gold",
+      "amount": 270
     },
     {
       "name": "tconstruct:molten_obsidian",
-      "amount": 2000
+      "amount": 1000
     },
     {
       "name": "tconstruct:liquid_soul",
       "amount": 2000
+    },
+    {
+      "name": "tconstruct:earth_slime",
+      "amount": 750
     }
   ],
   "result": {

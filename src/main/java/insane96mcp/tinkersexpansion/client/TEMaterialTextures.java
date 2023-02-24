@@ -15,6 +15,6 @@ public class TEMaterialTextures extends AbstractMaterialSpriteProvider {
         buildMaterial(TEMaterials.SLIMEDICE)
                 .meleeHarvest()
                 .fallbacks("rock")
-                .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF0d572b).addARGB(102, 0xFF2f794d).addARGB(140, 0xFF519b6f).addARGB(178, 0xFF84cea2).addARGB(216, 0xFFacf6ca).addARGB(255, 0xFFe5fff0).build());
+                .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF1E7F38).addARGB(102, 0xFF357F53).addARGB(140, 0xFF499367).addARGB(178, 0xFF5DA77B).addARGB(216, 0xFF77C195).addARGB(255, 0xFF8AD4A8).build());
     }
 }

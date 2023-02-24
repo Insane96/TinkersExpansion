@@ -11,14 +11,11 @@
         "type": "minecraft:crafting_shaped",
         "pattern": [
           "XXX",
-          "XYX",
+          "XXX",
           "XXX"
         ],
         "key": {
           "X": {
-            "tag": "forge:nuggets/slimedice"
-          },
-          "Y": {
             "item": "tinkersexpansion:slimedice_nugget"
           }
         },

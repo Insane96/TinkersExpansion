@@ -1,0 +1,32 @@
+{
+  "fluid": {
+    "tag": "tconstruct:molten_slimesteel",
+    "amount": 10
+  },
+  "effects": [
+    {
+      "type": "tconstruct:conditional",
+      "entity": {
+        "type": "tconstruct:inverted",
+        "predicate": "tconstruct:fire_immune"
+      },
+      "effect": {
+        "type": "tconstruct:damage",
+        "damage_type": "fire",
+        "damage_amount": 3.0
+      }
+    },
+    {
+      "type": "tconstruct:effect",
+      "name": "minecraft:luck",
+      "time": 10,
+      "level": 1
+    },
+    {
+      "type": "tconstruct:effect",
+      "name": "minecraft:slowness",
+      "time": 10,
+      "level": 2
+    }
+  ]
+}
