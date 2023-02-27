@@ -1,19 +1,16 @@
 package insane96mcp.tinkersexpansion.modifiers;
 
-import insane96mcp.tinkersexpansion.TinkersExpansion;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraftforge.fml.common.Mod;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import java.util.List;
 
-@Mod.EventBusSubscriber(modid = TinkersExpansion.MOD_ID)
 public class D20Modifier extends Modifier {
 
     //private static final int[] DIE_ROLLS = {0, 20, 12, 10, 8, 6, 4};
