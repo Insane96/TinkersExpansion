@@ -7,8 +7,6 @@ import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraftforge.fml.common.Mod;
-import org.apache.logging.log4j.Level;
-import slimeknights.tconstruct.TConstruct;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.tools.TinkerModifiers;
@@ -48,11 +46,9 @@ public class D20Modifier extends Modifier {
 
         ItemStack toModify = generatedLoot.get(RANDOM.nextInt(generatedLoot.size()));
         if (roll == 1) {
-            TConstruct.LOG.log(Level.INFO, "fail");
             toModify.shrink(1);
         }
         else {
-            TConstruct.LOG.log(Level.INFO, "success");
             toModify.grow(1);
         }
         return generatedLoot;
