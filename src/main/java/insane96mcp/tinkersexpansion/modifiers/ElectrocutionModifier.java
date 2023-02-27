@@ -1,6 +1,7 @@
 package insane96mcp.tinkersexpansion.modifiers;
 
 import insane96mcp.tinkersexpansion.TinkersExpansion;
+import insane96mcp.tinkersexpansion.setup.TESounds;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -49,7 +50,7 @@ public class ElectrocutionModifier extends Modifier {
     @Override
     public int afterEntityHit(IToolStackView tool, int level, ToolAttackContext context, float damageDealt) {
         //Don't trigger if attack is not fully charged
-        if (context.getCooldown() < 0.9)
+        if (context.getCooldown() < 0.9f)
             return 0;
 
         if (this.getCharges(tool) < this.getChargesRequired(tool)) {
@@ -65,12 +66,13 @@ public class ElectrocutionModifier extends Modifier {
                 source = DamageSource.mobAttack(context.getAttacker());
             }
             source.bypassArmor();
-            double range = 5d + tool.getModifierLevel(this);
+            double range = 5d + level;
             float secondaryDamage = 4f;
             List<LivingEntity> entitiesNearby = context.getAttacker().level.getNearbyEntities(LivingEntity.class, TargetingConditions.DEFAULT, context.getAttacker(), context.getAttacker().getBoundingBox().inflate(range));
-            for (int i = 0; i < entitiesNearby.size() && i < 4; i++) {
+            for (int i = 0; i < entitiesNearby.size() && i < 3 + level; i++) {
                 ToolAttackUtil.attackEntitySecondary(source, secondaryDamage, entitiesNearby.get(i), context.getLivingTarget(), true);
-                entitiesNearby.get(i).addEffect(new MobEffectInstance(MobEffects.GLOWING, 30, 0));
+                entitiesNearby.get(i).addEffect(new MobEffectInstance(MobEffects.GLOWING, 25, 0));
+                entitiesNearby.get(i).playSound(TESounds.ELECTROCUTION.get(), 1.0f, 1.0f);
             }
             this.discharge(tool);
 

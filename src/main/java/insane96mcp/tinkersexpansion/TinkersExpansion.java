@@ -6,6 +6,7 @@ import insane96mcp.tinkersexpansion.data.*;
 import insane96mcp.tinkersexpansion.setup.TEItemsBlocks;
 import insane96mcp.tinkersexpansion.setup.TEMaterials;
 import insane96mcp.tinkersexpansion.setup.TEModifiers;
+import insane96mcp.tinkersexpansion.setup.TESounds;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,6 +32,7 @@ public class TinkersExpansion
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         TEModifiers.init(bus);
         TEItemsBlocks.init(bus);
+        TESounds.SOUND_EVENTS.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }

@@ -11,5 +11,9 @@
 
     "modifier.tinkersexpansion.d20": "D20",
     "modifier.tinkersexpansion.d20.flavor": "Will you take the chance?",
-    "modifier.tinkersexpansion.d20.description": "Roll a die on mob loot and increase/decrease the outcome."
+    "modifier.tinkersexpansion.d20.description": "Roll a die on mob loot and increase/decrease the outcome.",
+
+    "modifier.tinkersexpansion.electrocution": "Electrocution",
+    "modifier.tinkersexpansion.electrocution.flavor": "Conducting",
+    "modifier.tinkersexpansion.electrocution.description": "Charge up a powerful electric attack"
 }

@@ -1,0 +1,8 @@
+{
+    "electrocution": {
+        "subtitle": "tinkersexpansion.subtitle.electrocution",
+        "sounds": [
+            "tinkersexpansion:electrocution"
+        ]
+    }
+}
