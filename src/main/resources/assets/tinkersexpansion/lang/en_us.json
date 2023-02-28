@@ -15,5 +15,9 @@
 
     "modifier.tinkersexpansion.electrocution": "Electrocution",
     "modifier.tinkersexpansion.electrocution.flavor": "Conducting",
-    "modifier.tinkersexpansion.electrocution.description": "Charge up a powerful electric attack"
+    "modifier.tinkersexpansion.electrocution.description": "Charge up a powerful electric attack",
+    "modifier.tinkersexpansion.electrocution.charges": "Charges: %d / %d",
+    "modifier.tinkersexpansion.electrocution.damage": "%.2f Electric Damage",
+
+    "tinkersexpansion.subtitle.electrocution": "Electrocution"
 }
