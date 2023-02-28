@@ -7,7 +7,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
-import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import java.util.List;
 
@@ -34,7 +33,7 @@ public class D20Modifier extends Modifier {
 
     @Override
     public List<ItemStack> processLoot(IToolStackView tool, int level, List<ItemStack> generatedLoot, LootContext context) {
-        if (tool.getModifierLevel(TinkerModifiers.silky.get()) > 0)
+        if (generatedLoot.isEmpty())
             return generatedLoot;
         int die = 20 + (level - 1);
         int roll = RANDOM.nextInt(die) + 1;

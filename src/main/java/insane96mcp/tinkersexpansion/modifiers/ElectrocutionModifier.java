@@ -12,9 +12,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.Nullable;
@@ -24,7 +22,6 @@ import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.helper.ToolAttackUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
-import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,12 +68,12 @@ public class ElectrocutionModifier extends Modifier {
             this.discharge(tool);
 
             DamageSource source = damageSource(context.getAttacker());
-            double range = 4d;
+            double range = 4.5d;
             float secondaryDamage = getElectricDamage(tool, level);
             int hitEntities = 0;
             List<LivingEntity> listOfHitEntities = new ArrayList<>();
             //Add the player to the list, so it doesn't get targeted
-            //listOfHitEntities.add(context.getAttacker());
+            listOfHitEntities.add(context.getAttacker());
             Entity lastEntityHit = context.getTarget();
             do {
                 List<LivingEntity> entitiesOfClass = lastEntityHit.level.getEntitiesOfClass(LivingEntity.class, lastEntityHit.getBoundingBox().inflate(range),
@@ -118,25 +115,6 @@ public class ElectrocutionModifier extends Modifier {
         }
 
         return r;
-    }
-
-    @Override
-    public List<ItemStack> processLoot(IToolStackView tool, int level, List<ItemStack> generatedLoot, LootContext context) {
-        if (tool.getModifierLevel(TinkerModifiers.silky.get()) > 0)
-            return generatedLoot;
-        int die = 20 + (level - 1);
-        int roll = RANDOM.nextInt(die) + 1;
-        if (roll > 1 && roll < 19)
-            return generatedLoot;
-
-        ItemStack toModify = generatedLoot.get(RANDOM.nextInt(generatedLoot.size()));
-        if (roll == 1) {
-            toModify.shrink(1);
-        }
-        else {
-            toModify.grow(1);
-        }
-        return generatedLoot;
     }
 
     @Override

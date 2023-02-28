@@ -19,5 +19,6 @@
     "modifier.tinkersexpansion.electrocution.charges": "Charges: %d / %d",
     "modifier.tinkersexpansion.electrocution.damage": "%.2f Electric Damage",
 
-    "tinkersexpansion.subtitle.electrocution": "Electrocution"
+    "tinkersexpansion.subtitle.electrocution": "Electrocution",
+    "death.attack.tinkersexpansion.electrocution": "%s was Electrocuted by %s"
 }
