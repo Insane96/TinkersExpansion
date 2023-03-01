@@ -1,4 +1,10 @@
 {
-    "modifier.tinkersexpansion.d20": "#40ff00",
-    "modifier.tinkersexpansion.electrocution": "#ded831"
+    "modifier.tinkersexpansion": {
+        "d20": "#40ff00",
+        "electrocution": "#ded831"
+    },
+    "material.tinkersexpansion": {
+        "slimedice": "#8ad4a8",
+        "coated_copper": "#2B182A"
+    }
 }

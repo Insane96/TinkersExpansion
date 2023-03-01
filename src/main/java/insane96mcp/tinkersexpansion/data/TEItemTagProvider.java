@@ -20,6 +20,7 @@ public class TEItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags() {
         addMetalTags(TEItemsBlocks.SLIMEDICE);
+        addMetalTags(TEItemsBlocks.COATED_COPPER);
         this.tag(ItemTags.BEACON_PAYMENT_ITEMS)
                 .addTags(TEItemsBlocks.SLIMEDICE.getIngotTag());
     }

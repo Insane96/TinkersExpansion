@@ -22,5 +22,6 @@ public class TEBlockLoot extends BlockLoot {
     @Override
     protected void addTables() {
         this.dropSelf(TEItemsBlocks.SLIMEDICE.get());
+        this.dropSelf(TEItemsBlocks.COATED_COPPER.get());
     }
 }

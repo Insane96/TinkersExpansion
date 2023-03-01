@@ -65,6 +65,11 @@ public class TERecipesProvider extends RecipeProvider implements IConditionBuild
 
         metalMaterialRecipe(consumer, TEMaterials.SLIMEDICE, materialFolder, "slimedice", false);
         materialMeltingCasting(consumer, TEMaterials.SLIMEDICE, TEItemsBlocks.MOLTEN_SLIMEDICE, materialFolder);
+
+        //Coated Copper
+        blockIngotNuggetCompression(consumer, TEMaterials.COATED_COPPER.getId().getPath(), Item.byBlock(TEItemsBlocks.COATED_COPPER.get()), TEItemsBlocks.COATED_COPPER.getIngot(), TEItemsBlocks.COATED_COPPER.getNugget());
+
+
     }
 
     public void blockIngotNuggetCompression(Consumer<FinishedRecipe> consumer, String name, Item block, Item ingot, Item nugget) {

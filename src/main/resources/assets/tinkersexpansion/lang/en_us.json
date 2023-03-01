@@ -13,12 +13,19 @@
     "modifier.tinkersexpansion.d20.flavor": "Will you take the chance?",
     "modifier.tinkersexpansion.d20.description": "Roll a die on mob loot and increase/decrease the outcome.",
 
+    "block.tinkersexpansion.coated_copper_block": "Coated Copper Block",
+    "item.tinkersexpansion.coated_copper_ingot": "Coated Copper Ingot",
+    "item.tinkersexpansion.coated_copper_nugget": "Coated Copper Nugget",
+
+    "material.tinkersexpansion.coated_copper": "Coated Copper",
+    "material.tinkersexpansion.coated_copper.flavor": "Zaps when charged",
+    "material.tinkersexpansion.coated_copper.encyclopedia": "After 4 hits the next attack deals armor piercing damage to mobs nearby",
+
     "modifier.tinkersexpansion.electrocution": "Electrocution",
     "modifier.tinkersexpansion.electrocution.flavor": "Conducting",
     "modifier.tinkersexpansion.electrocution.description": "Charge up a powerful electric attack",
     "modifier.tinkersexpansion.electrocution.charges": "Charges: %d / %d",
     "modifier.tinkersexpansion.electrocution.damage": "%.2f Electric Damage",
-
     "tinkersexpansion.subtitle.electrocution": "Electrocution",
     "death.attack.tinkersexpansion.electrocution": "%s was Electrocuted by %s"
 }

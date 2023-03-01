@@ -21,8 +21,9 @@ public class TEBlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags() {
         addMetalTags(TEItemsBlocks.SLIMEDICE, true);
+        addMetalTags(TEItemsBlocks.COATED_COPPER, false);
 
-        tagBlocks(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_IRON_TOOL, TEItemsBlocks.SLIMEDICE);
+        tagBlocks(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_STONE_TOOL, TEItemsBlocks.COATED_COPPER);
     }
 
     /**

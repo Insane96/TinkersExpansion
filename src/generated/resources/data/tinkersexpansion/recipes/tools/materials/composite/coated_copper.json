@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material_fluid",
+  "input": "tconstruct:copper",
+  "fluid": {
+    "tag": "tconstruct:molten_obsidian",
+    "amount": 1000
+  },
+  "temperature": 1000,
+  "output": "tinkersexpansion:coated_copper"
+}

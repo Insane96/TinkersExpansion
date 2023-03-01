@@ -14,8 +14,10 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 import slimeknights.mantle.item.BlockTooltipItem;
+import slimeknights.mantle.item.TooltipItem;
 import slimeknights.mantle.registration.ModelFluidAttributes;
 import slimeknights.mantle.registration.deferred.FluidDeferredRegister;
+import slimeknights.mantle.registration.deferred.ItemDeferredRegister;
 import slimeknights.mantle.registration.object.FluidObject;
 import slimeknights.mantle.registration.object.MetalItemObject;
 import slimeknights.tconstruct.common.TinkerModule;
@@ -23,20 +25,25 @@ import slimeknights.tconstruct.common.registration.BlockDeferredRegisterExtensio
 import slimeknights.tconstruct.library.materials.definition.MaterialId;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class TEItemsBlocks {
+    protected static final ItemDeferredRegister ITEMS = new ItemDeferredRegister(TinkersExpansion.MOD_ID);
     protected static final BlockDeferredRegisterExtension BLOCKS = new BlockDeferredRegisterExtension(TinkersExpansion.MOD_ID);
     protected static final FluidDeferredRegister FLUIDS = new FluidDeferredRegister(TinkersExpansion.MOD_ID);
 
     protected static final Item.Properties GENERAL_PROPS = new Item.Properties().tab(TinkerModule.TAB_GENERAL);
-
     protected static final Function<Block,? extends BlockItem> GENERAL_TOOLTIP_BLOCK_ITEM = (b) -> new BlockTooltipItem(b, GENERAL_PROPS);
+    protected static final Supplier<Item> TOOLTIP_ITEM = () -> new TooltipItem(GENERAL_PROPS);
 
 
     //Slimedice
     public static final MetalItemObject SLIMEDICE = BLOCKS.registerMetal("slimedice", metalBuilder(MaterialColor.TERRACOTTA_GREEN), GENERAL_TOOLTIP_BLOCK_ITEM, GENERAL_PROPS);
 
     public static final FluidObject<ForgeFlowingFluid> MOLTEN_SLIMEDICE = FLUIDS.register("molten_slimedice", hotBuilder().temperature(1200), Material.LAVA, 8);
+
+    //Coated Copper (no molten version exists)
+    public static final MetalItemObject COATED_COPPER = BLOCKS.registerMetal("coated_copper", metalBuilder(MaterialColor.COLOR_PURPLE), GENERAL_TOOLTIP_BLOCK_ITEM, GENERAL_PROPS);
 
 
     /** Creates a builder for a hot fluid */
@@ -59,6 +66,7 @@ public class TEItemsBlocks {
     }
 
     public static void init(IEventBus bus) {
+        ITEMS.register(bus);
         BLOCKS.register(bus);
         FLUIDS.register(bus);
     }

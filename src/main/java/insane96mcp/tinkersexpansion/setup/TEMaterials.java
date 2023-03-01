@@ -13,6 +13,7 @@ import slimeknights.tconstruct.tools.stats.*;
 public class TEMaterials extends AbstractMaterialDataProvider {
 
     public static final MaterialId SLIMEDICE = createMaterial("slimedice");
+    public static final MaterialId COATED_COPPER = createMaterial("coated_copper");
 
     public TEMaterials(DataGenerator gen) {
         super(gen);
@@ -21,6 +22,7 @@ public class TEMaterials extends AbstractMaterialDataProvider {
     @Override
     protected void addMaterials() {
         addMaterial(SLIMEDICE, 3, ORDER_WEAPON, true);
+        addMaterial(COATED_COPPER, 2, ORDER_WEAPON, true);
     }
 
     private static MaterialId createMaterial(String name) {
@@ -46,6 +48,7 @@ public class TEMaterials extends AbstractMaterialDataProvider {
         @Override
         protected void addMaterialTraits() {
             addDefaultTraits(SLIMEDICE, TEModifiers.D20);
+            addDefaultTraits(COATED_COPPER, TEModifiers.ELECTROCUTION);
         }
     }
 
@@ -64,10 +67,17 @@ public class TEMaterials extends AbstractMaterialDataProvider {
         protected void addMaterialStats() {
             addMaterialStats(SLIMEDICE,
                     new HeadMaterialStats(250, 4f, Tiers.DIAMOND, 2.5f),
-                    new HandleMaterialStats(0.85f, 1.0f, 0.9f, 1.2f),
+                    new HandleMaterialStats(0.85f, 1.0f, 0.95f, 1.15f),
                     ExtraMaterialStats.DEFAULT,
                     new LimbMaterialStats(250, 0.15f, -0.1f, 0.15f),
                     new GripMaterialStats(0.85f, -0.1f, 3.5f));
+
+            addMaterialStats(COATED_COPPER,
+                    new HeadMaterialStats(125, 4f, Tiers.IRON, 4f),
+                    new HandleMaterialStats(0.8f, 1.05f, 0.9f, 1.2f),
+                    ExtraMaterialStats.DEFAULT,
+                    new LimbMaterialStats(125, -0.15f, 0.1f, 0.1f),
+                    new GripMaterialStats(0.8f, 0.1f, 2.5f));
         }
     }
 }

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#forge:storage_blocks/slimedice"
+    "#forge:storage_blocks/slimedice",
+    "#forge:storage_blocks/coated_copper"
   ]
 }

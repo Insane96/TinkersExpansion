@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#forge:ingots/slimedice"
+    "#forge:ingots/slimedice",
+    "#forge:ingots/coated_copper"
   ]
 }
