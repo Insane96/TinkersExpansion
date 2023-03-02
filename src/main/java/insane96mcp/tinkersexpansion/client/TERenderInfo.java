@@ -14,6 +14,7 @@ public class TERenderInfo extends AbstractMaterialRenderInfoProvider {
     @Override
     protected void addMaterialRenderInfo() {
         buildRenderInfo(TEMaterials.SLIMEDICE).color(0x8ad4a8);
+        buildRenderInfo(TEMaterials.COATED_COPPER).color(0x2B182A);
     }
 
     @Override

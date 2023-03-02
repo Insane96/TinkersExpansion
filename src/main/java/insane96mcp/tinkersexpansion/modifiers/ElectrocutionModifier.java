@@ -66,7 +66,6 @@ public class ElectrocutionModifier extends Modifier {
         }
         else {
             this.discharge(tool);
-
             DamageSource source = damageSource(context.getAttacker());
             double range = 4.5d;
             float secondaryDamage = getElectricDamage(tool, level);

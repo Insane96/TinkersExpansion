@@ -8,13 +8,13 @@
       "attackDamage": 1.2
     },
     "tconstruct:head": {
-      "durability": 125,
+      "durability": 224,
       "miningSpeed": 4.0,
       "harvestTier": "minecraft:iron",
-      "attack": 4.0
+      "attack": 3.0
     },
     "tconstruct:limb": {
-      "durability": 125,
+      "durability": 224,
       "drawSpeed": -0.15,
       "velocity": 0.1,
       "accuracy": 0.1
