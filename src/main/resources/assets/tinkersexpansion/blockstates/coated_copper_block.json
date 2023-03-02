@@ -1,7 +1,21 @@
 {
     "variants": {
-        "": {
-            "model": "tinkersexpansion:block/storage/coated_copper"
-        }
+        "": [
+            {
+                "model": "tinkersexpansion:block/storage/coated_copper"
+            },
+            {
+                "model": "tinkersexpansion:block/storage/coated_copper",
+                "y": 90
+            },
+            {
+                "model": "tinkersexpansion:block/storage/coated_copper",
+                "y": 180
+            },
+            {
+                "model": "tinkersexpansion:block/storage/coated_copper",
+                "y": 270
+            }
+        ]
     }
 }

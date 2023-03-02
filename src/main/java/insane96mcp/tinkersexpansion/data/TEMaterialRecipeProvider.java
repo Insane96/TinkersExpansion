@@ -27,7 +27,7 @@ public class TEMaterialRecipeProvider extends RecipeProvider implements IMateria
         metalMaterialRecipe(consumer, TEMaterials.SLIMEDICE, folder, "slimedice", false);
         materialMeltingCasting(consumer, TEMaterials.SLIMEDICE, TEItemsBlocks.MOLTEN_SLIMEDICE, false, folder);
 
-        materialComposite(consumer, MaterialIds.copper, TEMaterials.COATED_COPPER, TinkerFluids.moltenObsidian, false, FluidAttributes.BUCKET_VOLUME, folder);
+        materialComposite(consumer, MaterialIds.copper, TEMaterials.COATED_COPPER, TinkerFluids.moltenObsidian, false, FluidAttributes.BUCKET_VOLUME / 4, folder);
     }
 
     @Override

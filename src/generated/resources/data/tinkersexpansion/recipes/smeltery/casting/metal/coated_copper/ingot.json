@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "minecraft:copper_ingot"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "tconstruct:molten_obsidian",
+    "amount": 250
+  },
+  "result": "tinkersexpansion:coated_copper_ingot",
+  "cooling_time": 111
+}

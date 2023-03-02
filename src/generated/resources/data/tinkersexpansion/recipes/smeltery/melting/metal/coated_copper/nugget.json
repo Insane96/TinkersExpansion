@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkersexpansion:coated_copper_nugget"
+  },
+  "result": {
+    "fluid": "tconstruct:molten_copper",
+    "amount": 10
+  },
+  "temperature": 500,
+  "time": 17,
+  "byproducts": [
+    {
+      "fluid": "tconstruct:molten_obsidian",
+      "amount": 25
+    }
+  ]
+}

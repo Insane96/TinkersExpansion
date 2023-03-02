@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_basin",
+  "cast": {
+    "tag": "forge:storage_blocks/copper"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "tconstruct:molten_obsidian",
+    "amount": 2250
+  },
+  "result": "tinkersexpansion:coated_copper_block",
+  "cooling_time": 332
+}

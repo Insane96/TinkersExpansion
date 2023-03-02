@@ -10,8 +10,13 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidStack;
 import slimeknights.mantle.recipe.data.IRecipeHelper;
 import slimeknights.tconstruct.fluids.TinkerFluids;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
@@ -19,6 +24,8 @@ import slimeknights.tconstruct.library.data.recipe.ISmelteryRecipeHelper;
 import slimeknights.tconstruct.library.data.recipe.IToolRecipeHelper;
 import slimeknights.tconstruct.library.recipe.FluidValues;
 import slimeknights.tconstruct.library.recipe.alloying.AlloyRecipeBuilder;
+import slimeknights.tconstruct.library.recipe.casting.ItemCastingRecipeBuilder;
+import slimeknights.tconstruct.library.recipe.melting.MeltingRecipeBuilder;
 
 import java.util.function.Consumer;
 
@@ -69,8 +76,24 @@ public class TERecipesProvider extends RecipeProvider implements IConditionBuild
         //Coated Copper
         blockIngotNuggetCompression(consumer, TEMaterials.COATED_COPPER.getId().getPath(), Item.byBlock(TEItemsBlocks.COATED_COPPER.get()), TEItemsBlocks.COATED_COPPER.getIngot(), TEItemsBlocks.COATED_COPPER.getNugget());
 
-        //TODO Add items smelting to copper (+obsidian in foundry)
+        MeltingRecipeBuilder.melting(Ingredient.of(TEItemsBlocks.COATED_COPPER.get()), TinkerFluids.moltenCopper.get(), FluidValues.METAL_BLOCK)
+                .addByproduct(new FluidStack(TinkerFluids.moltenObsidian.get(), FluidValues.GLASS_PANE * 9))
+                .save(consumer, modResource(meltingFolder + "coated_copper/block"));
+        MeltingRecipeBuilder.melting(Ingredient.of(TEItemsBlocks.COATED_COPPER.getIngot()), TinkerFluids.moltenCopper.get(), FluidValues.INGOT)
+                .addByproduct(new FluidStack(TinkerFluids.moltenObsidian.get(), FluidValues.GLASS_PANE))
+                .save(consumer, modResource(meltingFolder + "coated_copper/ingot"));
+        MeltingRecipeBuilder.melting(Ingredient.of(TEItemsBlocks.COATED_COPPER.getNugget()), TinkerFluids.moltenCopper.get(), FluidValues.NUGGET)
+                .addByproduct(new FluidStack(TinkerFluids.moltenObsidian.get(), FluidValues.GLASS_PANE / 10 /* 1/10th of Obsidian Pane */))
+                .save(consumer, modResource(meltingFolder + "coated_copper/nugget"));
 
+        ItemCastingRecipeBuilder.basinRecipe(TEItemsBlocks.COATED_COPPER.get())
+                .setFluidAndTime(TinkerFluids.moltenObsidian, FluidAttributes.BUCKET_VOLUME / 4 * 9)
+                .setCast(Tags.Items.STORAGE_BLOCKS_COPPER, true)
+                .save(consumer, modResource(castingFolder + "coated_copper/block"));
+        ItemCastingRecipeBuilder.tableRecipe(TEItemsBlocks.COATED_COPPER.getIngot())
+                .setFluidAndTime(TinkerFluids.moltenObsidian, FluidAttributes.BUCKET_VOLUME / 4)
+                .setCast(Items.COPPER_INGOT, true)
+                .save(consumer, modResource(castingFolder + "coated_copper/ingot"));
     }
 
     public void blockIngotNuggetCompression(Consumer<FinishedRecipe> consumer, String name, Item block, Item ingot, Item nugget) {
