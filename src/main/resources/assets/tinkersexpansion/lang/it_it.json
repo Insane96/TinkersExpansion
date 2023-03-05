@@ -1,0 +1,47 @@
+{
+    "block.tinkersexpansion.slimedice_block": "Blocco di Dadoslime",
+    "item.tinkersexpansion.slimedice_ingot": "Lingotto di Dadoslime",
+    "item.tinkersexpansion.slimedice_nugget": "Pepita di Dadoslime",
+    "item.tinkersexpansion.molten_slimedice_bucket": "Secchio di Dadoslime",
+    "fluid.tinkersexpansion.molten_slimedice": "Dadoslime fuso",
+
+    "material.tinkersexpansion.slimedice": "Dadoslime",
+    "material.tinkersexpansion.slimedice.flavor": "Tiro salvezza su fortuna",
+    "material.tinkersexpansion.slimedice.encyclopedia": "Tira un D20 alla morte di un mob, con 1, il loot è diminuito di 1, con 20+, il loot è aumentato di 1",
+
+    "modifier.tinkersexpansion.d20": "D20",
+    "modifier.tinkersexpansion.d20.flavor": "Pronto a sfidare la fortuna?",
+    "modifier.tinkersexpansion.d20.description": "Tira un dado alla morte di un mob e aumenta/diminuisci il loot.",
+
+    "block.tinkersexpansion.coated_copper_block": "Blocco di Rame Rivestito",
+    "item.tinkersexpansion.coated_copper_ingot": "Lingotto di Rame Rivestito",
+    "item.tinkersexpansion.coated_copper_nugget": "Pepita di Rame Rivestito",
+
+    "material.tinkersexpansion.coated_copper": "Rame Rivestito",
+    "material.tinkersexpansion.coated_copper.flavor": "SCOSSA? Va bene!",
+    "material.tinkersexpansion.coated_copper.encyclopedia": "Dopo 4 colpi, il prossimo danneggerà i mob a catena con danno che ignora l'armatura",
+
+    "modifier.tinkersexpansion.electrocution": "Folgorazione",
+    "modifier.tinkersexpansion.electrocution.flavor": "Conduttore",
+    "modifier.tinkersexpansion.electrocution.description": "Carica un potente attacco elettrico",
+    "modifier.tinkersexpansion.electrocution.charges": "Cariche: %d / %d",
+    "modifier.tinkersexpansion.electrocution.damage": "%.2f Danno elettrico",
+    "tinkersexpansion.subtitle.electrocution": "Folgorazione",
+    "death.attack.tinkersexpansion.electrocution": "%s è stato folgorato da %s",
+
+    "modifier.tinkersexpansion.multi_roll": "Multi Capriola",
+    "modifier.tinkersexpansion.multi_roll.flavor": "",
+    "modifier.tinkersexpansion.multi_roll.description": "Ottieni una capriola in più",
+
+    "modifier.tinkersexpansion.acrobat": "Acrobata",
+    "modifier.tinkersexpansion.acrobat.flavor": "",
+    "modifier.tinkersexpansion.acrobat.description": "Puoi rotolare più spesso",
+
+    "modifier.tinkersexpansion.longfooted": "Piedelungo",
+    "modifier.tinkersexpansion.longfooted.flavor": "",
+    "modifier.tinkersexpansion.longfooted.description": "Rotoli più lontano",
+
+    "modifier.tinkersexpansion.sleek_swimmer": "Nuotatore Aggraziato",
+    "modifier.tinkersexpansion.sleek_swimmer.flavor": "Come un Delfino?",
+    "modifier.tinkersexpansion.sleek_swimmer.description": "La tua velocità di nuoto è aumentata"
+}
