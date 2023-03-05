@@ -73,8 +73,8 @@ public class TEMaterials extends AbstractMaterialDataProvider {
                     new GripMaterialStats(0.85f, -0.1f, 3.5f));
 
             addMaterialStats(COATED_COPPER,
-                    new HeadMaterialStats(224, 4f, Tiers.IRON, 3f),
-                    new HandleMaterialStats(0.8f, 1.05f, 0.9f, 1.2f),
+                    new HeadMaterialStats(204, 4f, Tiers.IRON, 2.75f),
+                    new HandleMaterialStats(0.85f, 1.05f, 0.9f, 1.15f),
                     ExtraMaterialStats.DEFAULT);
         }
     }

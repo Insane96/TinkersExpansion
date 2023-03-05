@@ -3,7 +3,7 @@
   "input": "tconstruct:copper",
   "fluid": {
     "tag": "tconstruct:molten_obsidian",
-    "amount": 1000
+    "amount": 250
   },
   "temperature": 1000,
   "output": "tinkersexpansion:coated_copper"

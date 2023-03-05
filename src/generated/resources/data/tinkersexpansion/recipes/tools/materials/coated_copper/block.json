@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:storage_blocks/coated_copper"
+  },
+  "value": 9,
+  "needed": 1,
+  "material": "tinkersexpansion:coated_copper",
+  "leftover": {
+    "tag": "forge:ingots/coated_copper"
+  }
+}

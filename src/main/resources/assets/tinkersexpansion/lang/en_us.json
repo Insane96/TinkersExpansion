@@ -19,7 +19,7 @@
 
     "material.tinkersexpansion.coated_copper": "Coated Copper",
     "material.tinkersexpansion.coated_copper.flavor": "Zaps when charged",
-    "material.tinkersexpansion.coated_copper.encyclopedia": "After 4 hits the next attack deals armor piercing damage to mobs nearby",
+    "material.tinkersexpansion.coated_copper.encyclopedia": "After 4 hits the next attack deals armor piercing damage to mobs in a chain",
 
     "modifier.tinkersexpansion.electrocution": "Electrocution",
     "modifier.tinkersexpansion.electrocution.flavor": "Conducting",
