@@ -3,17 +3,19 @@ package insane96mcp.tinkersexpansion;
 import insane96mcp.tinkersexpansion.client.TEMaterialTextures;
 import insane96mcp.tinkersexpansion.client.TERenderInfo;
 import insane96mcp.tinkersexpansion.data.*;
-import insane96mcp.tinkersexpansion.setup.TEItemsBlocks;
-import insane96mcp.tinkersexpansion.setup.TEMaterials;
-import insane96mcp.tinkersexpansion.setup.TEModifiers;
-import insane96mcp.tinkersexpansion.setup.TESounds;
+import insane96mcp.tinkersexpansion.network.NetworkHandler;
+import insane96mcp.tinkersexpansion.particle.ElectrocutionSparkParticle;
+import insane96mcp.tinkersexpansion.setup.*;
+import net.minecraft.client.Minecraft;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import slimeknights.tconstruct.library.client.data.material.MaterialPartTextureGenerator;
@@ -32,9 +34,13 @@ public class TinkersExpansion
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         TEModifiers.init(bus);
         TEItemsBlocks.init(bus);
+        TEParticles.PARTICLE_TYPES.register(bus);
         TESounds.SOUND_EVENTS.register(bus);
+        NetworkHandler.init();
 
         MinecraftForge.EVENT_BUS.register(this);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::preInit);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::registerParticleFactories);
     }
 
     @SubscribeEvent
@@ -62,5 +68,13 @@ public class TinkersExpansion
             generator.addProvider(new TEMaterials.TEMaterialTraits(generator, materials));
             generator.addProvider(new TEMaterialRecipeProvider(generator));
         }
+    }
+
+    public void preInit(FMLCommonSetupEvent event) {
+        NetworkHandler.init();
+    }
+
+    public void registerParticleFactories(ParticleFactoryRegisterEvent event) {
+        Minecraft.getInstance().particleEngine.register(TEParticles.ELECTROCUTION_SPARKS.get(), ElectrocutionSparkParticle.Provider::new);
     }
 }

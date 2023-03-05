@@ -1,20 +1,24 @@
 package insane96mcp.tinkersexpansion.modifiers;
 
 import insane96mcp.tinkersexpansion.TinkersExpansion;
+import insane96mcp.tinkersexpansion.network.ElectrocutionParticleMessage;
+import insane96mcp.tinkersexpansion.network.NetworkHandler;
 import insane96mcp.tinkersexpansion.setup.TESounds;
+import it.unimi.dsi.fastutil.ints.IntArrayList;
+import it.unimi.dsi.fastutil.ints.IntList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.EntityDamageSource;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.network.NetworkDirection;
 import org.jetbrains.annotations.Nullable;
 import slimeknights.mantle.client.TooltipKey;
 import slimeknights.tconstruct.library.modifiers.Modifier;
@@ -70,6 +74,7 @@ public class ElectrocutionModifier extends Modifier {
             double range = 4.5d;
             float secondaryDamage = getElectricDamage(tool, level);
             int hitEntities = 0;
+            IntList listIdsOfHitEntities = new IntArrayList();
             List<LivingEntity> listOfHitEntities = new ArrayList<>();
             //Add the player to the list, so it doesn't get targeted
             listOfHitEntities.add(context.getAttacker());
@@ -81,15 +86,20 @@ public class ElectrocutionModifier extends Modifier {
                                 || (livingEntity instanceof Player && context.getPlayerAttacker() != null && context.getPlayerAttacker().canHarmPlayer((Player) livingEntity)));
                 LivingEntity livingEntity = getNearestEntity(entitiesOfClass, listOfHitEntities, context.getTarget().position());
                 if (livingEntity == null)
-                    return hitEntities;
+                    break;
                 listOfHitEntities.add(livingEntity);
                 ToolAttackUtil.attackEntitySecondary(source, secondaryDamage, livingEntity, context.getLivingTarget(), true);
-                livingEntity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 20, 0, true, true));
+                //livingEntity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 20, 0, true, true));
+                listIdsOfHitEntities.add(livingEntity.getId());
                 livingEntity.playSound(TESounds.ELECTROCUTION.get(), 0.4f, 1.0f);
                 lastEntityHit = livingEntity;
                 hitEntities++;
             } while (hitEntities < 3 + level);
 
+            Object msg = new ElectrocutionParticleMessage(listIdsOfHitEntities);
+            for (Player player : context.getAttacker().level.players()) {
+                NetworkHandler.CHANNEL.sendTo(msg, ((ServerPlayer) player).connection.connection, NetworkDirection.PLAY_TO_CLIENT);
+            }
             return hitEntities;
         }
     }
