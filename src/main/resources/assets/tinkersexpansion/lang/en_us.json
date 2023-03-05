@@ -25,7 +25,23 @@
     "modifier.tinkersexpansion.electrocution.flavor": "Conducting",
     "modifier.tinkersexpansion.electrocution.description": "Charge up a powerful electric attack",
     "modifier.tinkersexpansion.electrocution.charges": "Charges: %d / %d",
-    "modifier.tinkersexpansion.electrocution.damage": "%.2f Electric Damage",
+    "modifier.tinkersexpansion.electrocution.damage": "%.2f Electric damage",
     "tinkersexpansion.subtitle.electrocution": "Electrocution",
-    "death.attack.tinkersexpansion.electrocution": "%s was Electrocuted by %s"
+    "death.attack.tinkersexpansion.electrocution": "%s was Electrocuted by %s",
+
+    "modifier.tinkersexpansion.multi_roll": "Multi Roll",
+    "modifier.tinkersexpansion.multi_roll.flavor": "",
+    "modifier.tinkersexpansion.multi_roll.description": "You gain one additional roll",
+
+    "modifier.tinkersexpansion.acrobat": "Acrobat",
+    "modifier.tinkersexpansion.acrobat.flavor": "",
+    "modifier.tinkersexpansion.acrobat.description": "You can roll more often",
+
+    "modifier.tinkersexpansion.longfooted": "Longfooted",
+    "modifier.tinkersexpansion.longfooted.flavor": "",
+    "modifier.tinkersexpansion.longfooted.description": "You roll farther",
+
+    "modifier.tinkersexpansion.sleek_swimmer": "Sleek Swimmer",
+    "modifier.tinkersexpansion.sleek_swimmer.flavor": "Like a Dolphin?",
+    "modifier.tinkersexpansion.sleek_swimmer.description": "Your swim speed is increased"
 }

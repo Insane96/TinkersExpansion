@@ -11,10 +11,10 @@
             "item": "minecraft:kelp"
         },
         {
-            "tag": "sleekswimmer:coral_plants"
+            "tag": "tinkersexpansion:coral_plants"
         },
         {
-            "tag": "sleekswimmer:coral_plants"
+            "tag": "tinkersexpansion:coral_plants"
         }
     ],
     "tools": {
@@ -24,7 +24,7 @@
         "upgrades": 1
     },
     "result": {
-        "name": "sleekswimmer:sleek_swimmer",
+        "name": "tinkersexpansion:sleek_swimmer",
         "level": 1
     },
     "max_level": 3

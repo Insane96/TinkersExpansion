@@ -1,10 +1,14 @@
 {
     "modifier.tinkersexpansion": {
         "d20": "#40ff00",
-        "electrocution": "#ded831"
+        "electrocution": "#ded831",
+        "multi_roll": "#e3ad30",
+        "acrobat": "#cc27c9",
+        "longfooted": "#38661e",
+        "sleek_swimmer": "#2793B8"
     },
     "material.tinkersexpansion": {
         "slimedice": "#8ad4a8",
         "coated_copper": "#2B182A"
-    }
+    },
 }
