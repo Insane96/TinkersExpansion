@@ -1,5 +1,11 @@
 {
     "type": "tconstruct:stat_boost",
+    "conditions": [
+        {
+            "modid": "combatroll",
+            "type": "forge:mod_loaded"
+        }
+    ],
     "level_display": "tconstruct:default",
     "attributes": [
       {

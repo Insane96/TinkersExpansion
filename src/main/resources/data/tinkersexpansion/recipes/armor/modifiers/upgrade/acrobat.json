@@ -1,5 +1,11 @@
 {
     "type": "tconstruct:modifier",
+    "conditions": [
+        {
+            "modid": "combatroll",
+            "type": "forge:mod_loaded"
+        }
+    ],
     "inputs": [
         {
             "item": "minecraft:piston"
