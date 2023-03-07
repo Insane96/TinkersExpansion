@@ -14,7 +14,6 @@ public class ElectrocutionSparkParticle extends TextureSheetParticle {
         super(pLevel, pX, pY, pZ, 0, 0, 0);
         this.lifetime = LIFETIME;
         this.friction = 0.96F;
-        this.speedUpWhenYMotionIsBlocked = true;
         this.sprites = spriteSet;
         this.quadSize *= 0.75F;
         this.hasPhysics = false;
