@@ -19,6 +19,7 @@ public class ElectrocutionSparkParticle extends TextureSheetParticle {
         this.quadSize *= 0.75F;
         this.hasPhysics = false;
         this.setColor(1.0F, 0.9F, 1.0F);
+        this.setParticleSpeed(0d, 0d, 0d);
         this.setSpriteFromAge(spriteSet);
     }
 
