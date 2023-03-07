@@ -1,8 +1,8 @@
 package insane96mcp.tinkersexpansion.data;
 
 import insane96mcp.tinkersexpansion.TinkersExpansion;
+import insane96mcp.tinkersexpansion.data.material.TEMaterialIds;
 import insane96mcp.tinkersexpansion.setup.TEItemsBlocks;
-import insane96mcp.tinkersexpansion.setup.TEMaterials;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -24,11 +24,11 @@ public class TEMaterialRecipeProvider extends RecipeProvider implements IMateria
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
         String folder = "tools/materials/";
 
-        metalMaterialRecipe(consumer, TEMaterials.SLIMEDICE, folder, "slimedice", false);
-        materialMeltingCasting(consumer, TEMaterials.SLIMEDICE, TEItemsBlocks.MOLTEN_SLIMEDICE, false, folder);
+        metalMaterialRecipe(consumer, TEMaterialIds.SLIMEDICE, folder, "slimedice", false);
+        materialMeltingCasting(consumer, TEMaterialIds.SLIMEDICE, TEItemsBlocks.MOLTEN_SLIMEDICE, false, folder);
 
-        materialComposite(consumer, MaterialIds.copper, TEMaterials.COATED_COPPER, TinkerFluids.moltenObsidian, false, FluidAttributes.BUCKET_VOLUME / 4, folder);
-        metalMaterialRecipe(consumer, TEMaterials.COATED_COPPER, folder, "coated_copper", false);
+        materialComposite(consumer, MaterialIds.copper, TEMaterialIds.COATED_COPPER, TinkerFluids.moltenObsidian, false, FluidAttributes.BUCKET_VOLUME / 4, folder);
+        metalMaterialRecipe(consumer, TEMaterialIds.COATED_COPPER, folder, "coated_copper", false);
     }
 
     @Override

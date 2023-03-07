@@ -1,7 +1,7 @@
 package insane96mcp.tinkersexpansion.data;
 
 import insane96mcp.tinkersexpansion.TinkersExpansion;
-import insane96mcp.tinkersexpansion.setup.TEMaterials;
+import insane96mcp.tinkersexpansion.data.material.TEMaterialIds;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import slimeknights.tconstruct.common.TinkerTags;
@@ -15,7 +15,7 @@ public class TEMaterialTagProvider extends AbstractMaterialTagProvider {
     @Override
     protected void addTags() {
         tag(TinkerTags.Materials.NETHER).add(
-                TEMaterials.SLIMEDICE
+                TEMaterialIds.SLIMEDICE
         );
     }
 

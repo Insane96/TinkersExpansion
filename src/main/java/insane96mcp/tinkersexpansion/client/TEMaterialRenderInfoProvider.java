@@ -1,20 +1,20 @@
 package insane96mcp.tinkersexpansion.client;
 
-import insane96mcp.tinkersexpansion.setup.TEMaterials;
+import insane96mcp.tinkersexpansion.data.material.TEMaterialIds;
 import net.minecraft.data.DataGenerator;
 import org.jetbrains.annotations.Nullable;
 import slimeknights.tconstruct.library.client.data.material.AbstractMaterialRenderInfoProvider;
 import slimeknights.tconstruct.library.client.data.material.AbstractMaterialSpriteProvider;
 
-public class TERenderInfo extends AbstractMaterialRenderInfoProvider {
-    public TERenderInfo(DataGenerator gen, @Nullable AbstractMaterialSpriteProvider materialSprites) {
+public class TEMaterialRenderInfoProvider extends AbstractMaterialRenderInfoProvider {
+    public TEMaterialRenderInfoProvider(DataGenerator gen, @Nullable AbstractMaterialSpriteProvider materialSprites) {
         super(gen, materialSprites);
     }
 
     @Override
     protected void addMaterialRenderInfo() {
-        buildRenderInfo(TEMaterials.SLIMEDICE).color(0x8ad4a8);
-        buildRenderInfo(TEMaterials.COATED_COPPER).color(0x2B182A);
+        buildRenderInfo(TEMaterialIds.SLIMEDICE).color(0x8ad4a8);
+        buildRenderInfo(TEMaterialIds.COATED_COPPER).color(0x2B182A);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package insane96mcp.tinkersexpansion.setup;
+package insane96mcp.tinkersexpansion.data.modifier;
 
 import insane96mcp.tinkersexpansion.TinkersExpansion;
 import slimeknights.tconstruct.library.modifiers.ModifierId;

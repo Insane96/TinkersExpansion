@@ -1,8 +1,8 @@
 package insane96mcp.tinkersexpansion.data;
 
 import insane96mcp.tinkersexpansion.TinkersExpansion;
+import insane96mcp.tinkersexpansion.data.material.TEMaterialIds;
 import insane96mcp.tinkersexpansion.setup.TEItemsBlocks;
-import insane96mcp.tinkersexpansion.setup.TEMaterials;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -58,7 +58,7 @@ public class TERecipesProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
         //Slimedice
-        blockIngotNuggetCompression(consumer, TEMaterials.SLIMEDICE.getId().getPath(), Item.byBlock(TEItemsBlocks.SLIMEDICE.get()), TEItemsBlocks.SLIMEDICE.getIngot(), TEItemsBlocks.SLIMEDICE.getNugget());
+        blockIngotNuggetCompression(consumer, TEMaterialIds.SLIMEDICE.getId().getPath(), Item.byBlock(TEItemsBlocks.SLIMEDICE.get()), TEItemsBlocks.SLIMEDICE.getIngot(), TEItemsBlocks.SLIMEDICE.getNugget());
 
         metalCasting(consumer, TEItemsBlocks.MOLTEN_SLIMEDICE, TEItemsBlocks.SLIMEDICE.get(), TEItemsBlocks.SLIMEDICE.getIngot(), TEItemsBlocks.SLIMEDICE.getNugget(), castingFolder, "slimedice");
         metalMelting(consumer, TEItemsBlocks.MOLTEN_SLIMEDICE.get(), "slimedice", false, meltingFolder, false);
@@ -70,11 +70,11 @@ public class TERecipesProvider extends RecipeProvider implements IConditionBuild
                 .addInput(TinkerFluids.earthSlime.get(), FluidValues.SLIMEBALL * 3)
                 .save(consumer, prefix(TEItemsBlocks.MOLTEN_SLIMEDICE, alloyFolder));
 
-        metalMaterialRecipe(consumer, TEMaterials.SLIMEDICE, materialFolder, "slimedice", false);
-        materialMeltingCasting(consumer, TEMaterials.SLIMEDICE, TEItemsBlocks.MOLTEN_SLIMEDICE, materialFolder);
+        metalMaterialRecipe(consumer, TEMaterialIds.SLIMEDICE, materialFolder, "slimedice", false);
+        materialMeltingCasting(consumer, TEMaterialIds.SLIMEDICE, TEItemsBlocks.MOLTEN_SLIMEDICE, materialFolder);
 
         //Coated Copper
-        blockIngotNuggetCompression(consumer, TEMaterials.COATED_COPPER.getId().getPath(), Item.byBlock(TEItemsBlocks.COATED_COPPER.get()), TEItemsBlocks.COATED_COPPER.getIngot(), TEItemsBlocks.COATED_COPPER.getNugget());
+        blockIngotNuggetCompression(consumer, TEMaterialIds.COATED_COPPER.getId().getPath(), Item.byBlock(TEItemsBlocks.COATED_COPPER.get()), TEItemsBlocks.COATED_COPPER.getIngot(), TEItemsBlocks.COATED_COPPER.getNugget());
 
         MeltingRecipeBuilder.melting(Ingredient.of(TEItemsBlocks.COATED_COPPER.get()), TinkerFluids.moltenCopper.get(), FluidValues.METAL_BLOCK)
                 .addByproduct(new FluidStack(TinkerFluids.moltenObsidian.get(), FluidValues.GLASS_PANE * 9))

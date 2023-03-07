@@ -1,11 +1,16 @@
 package insane96mcp.tinkersexpansion;
 
-import insane96mcp.tinkersexpansion.client.TEMaterialTextures;
-import insane96mcp.tinkersexpansion.client.TERenderInfo;
+import insane96mcp.tinkersexpansion.client.TEMaterialRenderInfoProvider;
+import insane96mcp.tinkersexpansion.client.TEMaterialSpriteProvider;
 import insane96mcp.tinkersexpansion.data.*;
+import insane96mcp.tinkersexpansion.data.material.TEMaterialDataProvider;
+import insane96mcp.tinkersexpansion.data.modifier.TEModifierProvider;
 import insane96mcp.tinkersexpansion.network.NetworkHandler;
 import insane96mcp.tinkersexpansion.particle.ElectrocutionSparkParticle;
-import insane96mcp.tinkersexpansion.setup.*;
+import insane96mcp.tinkersexpansion.setup.TEItemsBlocks;
+import insane96mcp.tinkersexpansion.setup.TEModifiers;
+import insane96mcp.tinkersexpansion.setup.TEParticles;
+import insane96mcp.tinkersexpansion.setup.TESounds;
 import net.minecraft.client.Minecraft;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
@@ -48,12 +53,12 @@ public class TinkersExpansion
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         if (event.includeClient()) {
-            TEMaterialTextures materialSprites = new TEMaterialTextures();
-            generator.addProvider(new TERenderInfo(generator, materialSprites));
+            TEMaterialSpriteProvider materialSprites = new TEMaterialSpriteProvider();
+            generator.addProvider(new TEMaterialRenderInfoProvider(generator, materialSprites));
             generator.addProvider(new MaterialPartTextureGenerator(generator, existingFileHelper, new TinkerPartSpriteProvider(), materialSprites));
         }
         if (event.includeServer()) {
-            generator.addProvider(new TEModifiers(generator));
+            generator.addProvider(new TEModifierProvider(generator));
             generator.addProvider(new TERecipesProvider(generator));
             generator.addProvider(new TELootTableProvider(generator));
             generator.addProvider(new TEMaterialTagProvider(generator, existingFileHelper));
@@ -62,10 +67,10 @@ public class TinkersExpansion
             generator.addProvider(blockTagsProvider);
             generator.addProvider(new TEItemTagProvider(generator, blockTagsProvider, existingFileHelper));
             generator.addProvider(new TESpillingFluidProvider(generator));
-            AbstractMaterialDataProvider materials = new TEMaterials(generator);
+            AbstractMaterialDataProvider materials = new TEMaterialDataProvider(generator);
             generator.addProvider(materials);
-            generator.addProvider(new TEMaterials.TEMaterialStats(generator, materials));
-            generator.addProvider(new TEMaterials.TEMaterialTraits(generator, materials));
+            generator.addProvider(new TEMaterialDataProvider.TEMaterialStats(generator, materials));
+            generator.addProvider(new TEMaterialDataProvider.TEMaterialTraits(generator, materials));
             generator.addProvider(new TEMaterialRecipeProvider(generator));
         }
     }
