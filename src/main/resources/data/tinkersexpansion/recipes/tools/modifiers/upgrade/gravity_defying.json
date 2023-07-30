@@ -1,0 +1,31 @@
+{
+    "type": "tconstruct:modifier",
+    "inputs": [
+        {
+            "item": "minecraft:feather"
+        },
+        {
+            "item": "minecraft:phantom_membrane"
+        },
+        {
+            "item": "minecraft:feather"
+        },
+        {
+            "tag": "tinkersexpansion:blaze_powder"
+        },
+        {
+            "tag": "tinkersexpansion:blaze_powder"
+        }
+    ],
+    "tools": {
+        "tag": "tconstruct:modifiable/armor/boots"
+    },
+    "slots": {
+        "upgrades": 1
+    },
+    "result": {
+        "name": "tinkersexpansion:gravity_defying",
+        "level": 1
+    },
+    "max_level": 1
+}

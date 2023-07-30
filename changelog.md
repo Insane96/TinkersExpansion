@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0
+* Added Gravity Defying modifier
+* Added More Flavor modifier
+
 ## 1.1.0
 * Added Slimedice material and D20 Trait to it
 * Added Coated Copper material and Electrocution Trait to it

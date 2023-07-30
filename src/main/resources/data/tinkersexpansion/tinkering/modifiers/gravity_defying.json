@@ -1,0 +1,15 @@
+{
+    "type": "tconstruct:stat_boost",
+    "level_display": "tconstruct:no_levels",
+    "attributes": [
+      {
+        "unique": "tinkersexpansion.modifier.entity_gravity",
+        "attribute": "forge:entity_gravity",
+        "operation": "multiply_total",
+        "amount": -0.7,
+        "slots": [
+          "feet"
+        ]
+      }
+    ]
+  }

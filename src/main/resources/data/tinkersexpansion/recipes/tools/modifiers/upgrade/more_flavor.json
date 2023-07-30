@@ -1,0 +1,17 @@
+{
+    "type": "tconstruct:modifier",
+    "inputs": [
+        {
+            "item": "minecraft:cookie"
+        }
+    ],
+    "tools": {
+        "tag": "tconstruct:modifiable"
+    },
+    "allow_crystal": false,
+    "result": {
+        "name": "tinkersexpansion:more_flavor",
+        "level": 1
+    },
+    "max_level": 1
+}
