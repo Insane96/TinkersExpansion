@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.1
+* Fixed gravity defying recipe
+
 ## 1.2.0
 * Added Gravity Defying modifier
 * Added More Flavor modifier
