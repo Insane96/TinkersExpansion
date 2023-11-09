@@ -19,9 +19,9 @@ public class TEModifierProvider extends AbstractModifierProvider {
     @Override
     protected void addModifiers() {
         if (ModList.get().isLoaded("combatroll")) {
-            addModifier(TEModifierIds.LONGFOOTED, StatBoostModifier.builder().attribute("tinkercombatroll.longfooted", ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("combatroll:distance")), AttributeModifier.Operation.ADDITION, 1f, EquipmentSlot.FEET).build());
-            addModifier(TEModifierIds.ACROBAT, StatBoostModifier.builder().attribute("tinkercombatroll.acrobat", ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("combatroll:recharge")), AttributeModifier.Operation.MULTIPLY_BASE, 0.2f, EquipmentSlot.LEGS).build());
-            addModifier(TEModifierIds.MULTI_ROLL, StatBoostModifier.builder().attribute("tinkercombatroll.multi_roll", ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("combatroll:count")), AttributeModifier.Operation.ADDITION, 1f, EquipmentSlot.HEAD).build());
+            addModifier(TEModifierIds.LONGFOOTED, StatBoostModifier.builder().attribute("tinkersexpansion.longfooted", ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("combatroll:distance")), AttributeModifier.Operation.ADDITION, 1f, EquipmentSlot.FEET).build());
+            addModifier(TEModifierIds.ACROBAT, StatBoostModifier.builder().attribute("tinkersexpansion.acrobat", ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("combatroll:recharge")), AttributeModifier.Operation.MULTIPLY_BASE, 0.2f, EquipmentSlot.LEGS).build());
+            addModifier(TEModifierIds.MULTI_ROLL, StatBoostModifier.builder().attribute("tinkersexpansion.multi_roll", ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("combatroll:count")), AttributeModifier.Operation.ADDITION, 1f, EquipmentSlot.HEAD).build());
         }
     }
 

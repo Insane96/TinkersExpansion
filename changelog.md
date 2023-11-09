@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.2
+* Fixed Compat Roll compat not working
+
 ## 1.2.1
 * Fixed gravity defying recipe
 
