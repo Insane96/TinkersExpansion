@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.0
+* Added Lunge modifier
+
 ## 1.2.2
 * Fixed Compat Roll compat not working
 

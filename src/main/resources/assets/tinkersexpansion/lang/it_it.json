@@ -45,7 +45,15 @@
     "modifier.tinkersexpansion.sleek_swimmer.flavor": "Come un Delfino?",
     "modifier.tinkersexpansion.sleek_swimmer.description": "La tua velocità di nuoto è aumentata",
 
+    "modifier.tinkersexpansion.more_flavor": "Più Sapore",
+    "modifier.tinkersexpansion.more_flavor.flavor": "Alla mod gioverebbe un pò più di sapore",
+    "modifier.tinkersexpansion.more_flavor.description": "Aggiunge più sapore alla mod: altre varianti di spade, more sword variants, frecce",
+
     "modifier.tinkersexpansion.gravity_defying": "Anti Gravità",
     "modifier.tinkersexpansion.gravity_defying.flavor": "Come camminare sulla luna",
-    "modifier.tinkersexpansion.gravity_defying.description": "Riduce la gravità di chi lo indossa"
+    "modifier.tinkersexpansion.gravity_defying.description": "Riduce la gravità di chi lo indossa",
+
+    "modifier.tinkersexpansion.lunge": "Affondo",
+    "modifier.tinkersexpansion.lunge.flavor": "Disclaimer: Non è un vero affondo",
+    "modifier.tinkersexpansion.lunge.description": "Utilizza la fionda di slime del cielo su un attrezzo"
 }

@@ -3,6 +3,7 @@ package insane96mcp.tinkersexpansion.setup;
 import insane96mcp.tinkersexpansion.TinkersExpansion;
 import insane96mcp.tinkersexpansion.modifiers.D20Modifier;
 import insane96mcp.tinkersexpansion.modifiers.ElectrocutionModifier;
+import insane96mcp.tinkersexpansion.modifiers.LungeModifier;
 import net.minecraftforge.eventbus.api.IEventBus;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.util.ModifierDeferredRegister;
@@ -13,6 +14,7 @@ public class TEModifiers {
 
     public static final StaticModifier<Modifier> D20 = MODIFIERS.register("d20", D20Modifier::new);
     public static final StaticModifier<Modifier> ELECTROCUTION = MODIFIERS.register("electrocution", ElectrocutionModifier::new);
+    public static final StaticModifier<Modifier> LUNGE = MODIFIERS.register("lunge", LungeModifier::new);
 
     public static void init(IEventBus bus) {
         MODIFIERS.register(bus);

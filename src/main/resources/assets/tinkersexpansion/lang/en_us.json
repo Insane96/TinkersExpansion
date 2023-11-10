@@ -51,5 +51,9 @@
 
     "modifier.tinkersexpansion.gravity_defying": "Gravity Defying",
     "modifier.tinkersexpansion.gravity_defying.flavor": "Like walking on the moon",
-    "modifier.tinkersexpansion.gravity_defying.description": "Reduces the wearer gravity"
+    "modifier.tinkersexpansion.gravity_defying.description": "Reduces the wearer gravity",
+
+    "modifier.tinkersexpansion.lunge": "Lunge",
+    "modifier.tinkersexpansion.lunge.flavor": "Disclaimer: it's not a real lunge",
+    "modifier.tinkersexpansion.lunge.description": "Sky Slime Sling use on a tool"
 }
